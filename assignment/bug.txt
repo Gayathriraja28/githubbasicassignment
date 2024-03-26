@@ -1,0 +1,18 @@
+Bug Title: Incorrect Calculation of Sales Tax
+
+Description: In the checkout process of our e-commerce platform, users are experiencing incorrect calculations of sales tax for certain regions. Upon investigation, it's found that the sales tax rate for a specific region is not being properly retrieved from the database. As a result, users are being charged the wrong amount of sales tax, leading to discrepancies in their final order totals.
+
+Steps to Reproduce:
+1. Navigate to the checkout page.
+2. Input shipping address details for a region with a non-standard sales tax rate (e.g., a region with a sales tax rate different from the default).
+3. Proceed to the payment section and observe the calculated sales tax amount.
+4. Compare the displayed sales tax amount with the correct sales tax rate for the specified region.
+5. Notice that the calculated sales tax is incorrect, leading to an inaccurate total order amount.
+
+Expected Behavior: The software should accurately retrieve the sales tax rate for each region from the database and calculate the correct amount of sales tax based on the user's shipping address.
+
+Priority: Medium
+
+Severity: High (as it directly affects the amount customers are charged)
+
+Potential Solution: Update the code responsible for retrieving sales tax rates to ensure it accurately pulls data from the database. Implement thorough testing to verify that the correct sales tax rates are being applied for all regions during the checkout process.
